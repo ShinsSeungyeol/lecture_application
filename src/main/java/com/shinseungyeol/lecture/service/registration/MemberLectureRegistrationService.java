@@ -9,12 +9,13 @@ import com.shinseungyeol.lecture.exception.member.NotFoundMemberException;
 import com.shinseungyeol.lecture.infrastructure.lecture.LectureRepository;
 import com.shinseungyeol.lecture.infrastructure.member.MemberRepository;
 import com.shinseungyeol.lecture.infrastructure.registration.MemberLectureRegistrationRepository;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class LectureUserRegistrationService {
+public class MemberLectureRegistrationService {
 
     final MemberRepository memberRepository;
     final LectureRepository lectureRepository;
@@ -23,6 +24,12 @@ public class LectureUserRegistrationService {
     final MemberLectureRegistrationFactory memberLectureRegistrationFactory;
 
 
+    /**
+     * 사용자 강의 등록
+     *
+     * @param memberId
+     * @param lectureId
+     */
     public void register(Long memberId, Long lectureId) {
         Member member = memberRepository.findById(memberId)
             .orElseThrow(() -> new NotFoundMemberException());
@@ -34,6 +41,21 @@ public class LectureUserRegistrationService {
             lecture, member);
 
         memberLectureRegistrationRepository.save(memberLectureRegistration);
+
+    }
+
+
+    /**
+     * 사용자가 등록 신청 내역 목록 반환
+     *
+     * @param memberId
+     * @return
+     */
+    public List<MemberLectureRegistration> findAllByMemberId(Long memberId) {
+        Member member = memberRepository.findById(memberId)
+            .orElseThrow(() -> new NotFoundMemberException());
+
+        return memberLectureRegistrationRepository.findAllByMember(member);
 
     }
 
