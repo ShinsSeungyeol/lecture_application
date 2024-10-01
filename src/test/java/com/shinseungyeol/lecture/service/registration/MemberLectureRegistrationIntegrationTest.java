@@ -55,7 +55,6 @@ public class MemberLectureRegistrationIntegrationTest {
      */
     @Test
     void testLectureRegistrationLimit() throws InterruptedException {
-        long lectureId = 1L;
         final int TOTAL_USERS = 40;
         final int MAX_REGISTRATIONS = 30;
         ExecutorService executorService = Executors.newFixedThreadPool(TOTAL_USERS);
