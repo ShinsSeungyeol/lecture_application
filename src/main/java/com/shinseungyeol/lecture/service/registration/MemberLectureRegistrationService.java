@@ -9,12 +9,14 @@ import com.shinseungyeol.lecture.exception.member.NotFoundMemberException;
 import com.shinseungyeol.lecture.infrastructure.lecture.LectureRepository;
 import com.shinseungyeol.lecture.infrastructure.member.MemberRepository;
 import com.shinseungyeol.lecture.infrastructure.registration.MemberLectureRegistrationRepository;
+import jakarta.transaction.Transactional;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class MemberLectureRegistrationService {
 
     final MemberRepository memberRepository;

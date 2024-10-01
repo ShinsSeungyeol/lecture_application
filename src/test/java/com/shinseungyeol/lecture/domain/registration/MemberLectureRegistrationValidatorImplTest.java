@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class UserLectureMemberLectureRegistrationValidatorImplTest {
+class MemberLectureRegistrationValidatorImplTest {
 
     private final MemberLectureRegistrationValidator memberLectureRegistrationValidator = new MemberLectureRegistrationValidatorImpl();
 

@@ -46,13 +46,11 @@ public class Lecture extends BaseEntity {
     /**
      * 강의 시작 시간
      */
-    @Column(nullable = false)
     private LocalDateTime startTime;
 
     /**
      * 강의 종료 시간
      */
-    @Column(nullable = false)
     private LocalDateTime endTime;
 
 
@@ -72,6 +70,7 @@ public class Lecture extends BaseEntity {
         Lecture lecture = new Lecture();
 
         lecture.setName(name);
+        lecture.setSpeakerName(speakerName);
         lecture.setRegistrationStartTime(registrationStartTime);
         lecture.setRegistrationEndTime(registrationEndTime);
         lecture.setStartTime(startTime);

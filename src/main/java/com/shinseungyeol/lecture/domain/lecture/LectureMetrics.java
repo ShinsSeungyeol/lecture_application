@@ -35,6 +35,13 @@ public class LectureMetrics {
     @JoinColumn(nullable = false)
     private Lecture lecture;
 
+    public static LectureMetrics create(Lecture lecture) {
+        LectureMetrics metrics = new LectureMetrics();
+        metrics.setLecture(lecture);
+
+        return metrics;
+    }
+
 
     /**
      * 등록수를 + 1 하는 함수
