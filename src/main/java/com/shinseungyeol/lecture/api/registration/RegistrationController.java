@@ -1,5 +1,6 @@
 package com.shinseungyeol.lecture.api.registration;
 
+import com.shinseungyeol.lecture.domain.lecture.LectureService;
 import com.shinseungyeol.lecture.domain.registration.MemberLectureRegistrationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -16,10 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class RegistrationController {
 
     private final MemberLectureRegistrationService memberLectureRegistrationService;
+    private final LectureService lectureService;
 
     @PostMapping("/member-lecture")
     public ResponseEntity createMemberLectureRegistration(
-        @RequestBody CreateMemberLectureRegistrationDto dto) {
+        @RequestBody MemberLectureRegistrationRequestDto dto) {
         memberLectureRegistrationService.register(dto.getMemberId(), dto.getLectureId());
 
         return ResponseEntity.ok().body("success");

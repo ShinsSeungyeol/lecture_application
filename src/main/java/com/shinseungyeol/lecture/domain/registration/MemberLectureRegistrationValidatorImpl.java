@@ -25,6 +25,11 @@ public class MemberLectureRegistrationValidatorImpl implements
         validateRegistrationLimit(lectureMetrics);
     }
 
+    @Override
+    public int getMaxRegistrationLimit() {
+        return MAX_REGISTRATION_LIMIT;
+    }
+
     /**
      * 현재 등록 시작 시간이 적절한지 체크하는 함수
      *
@@ -32,8 +37,8 @@ public class MemberLectureRegistrationValidatorImpl implements
      */
     private void validateRegistrationTime(Lecture lecture) {
         LocalDateTime now = LocalDateTime.now();
-        LocalDateTime registrationStartTime = lecture.getRegistrationStartTime();
-        LocalDateTime registrationEndTime = lecture.getRegistrationEndTime();
+        LocalDateTime registrationStartTime = lecture.getRegistrationStartAt();
+        LocalDateTime registrationEndTime = lecture.getRegistrationEndAt();
 
         if (now.isBefore(registrationStartTime)) {
             throw new NotYetRegistrationTimeException();

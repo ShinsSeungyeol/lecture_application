@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CreateMemberLectureRegistrationDto {
+public class MemberLectureRegistrationRequestDto {
 
     private Long memberId;
 
