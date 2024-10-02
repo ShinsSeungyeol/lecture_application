@@ -35,23 +35,23 @@ public class Lecture extends BaseEntity {
      * 신청 시작 시간
      */
     @Column(nullable = false)
-    private LocalDateTime registrationStartTime;
+    private LocalDateTime registrationStartAt;
 
     /**
      * 신청 종료 시간
      */
     @Column(nullable = false)
-    private LocalDateTime registrationEndTime;
+    private LocalDateTime registrationEndAt;
 
     /**
      * 강의 시작 시간
      */
-    private LocalDateTime startTime;
+    private LocalDateTime startAt;
 
     /**
      * 강의 종료 시간
      */
-    private LocalDateTime endTime;
+    private LocalDateTime endAt;
 
 
     /**
@@ -71,10 +71,10 @@ public class Lecture extends BaseEntity {
 
         lecture.setName(name);
         lecture.setSpeakerName(speakerName);
-        lecture.setRegistrationStartTime(registrationStartTime);
-        lecture.setRegistrationEndTime(registrationEndTime);
-        lecture.setStartTime(startTime);
-        lecture.setEndTime(endTime);
+        lecture.setRegistrationStartAt(registrationStartTime);
+        lecture.setRegistrationEndAt(registrationEndTime);
+        lecture.setStartAt(startTime);
+        lecture.setEndAt(endTime);
 
         return lecture;
     }
