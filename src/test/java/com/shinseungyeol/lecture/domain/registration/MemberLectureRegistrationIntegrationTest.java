@@ -1,4 +1,4 @@
-package com.shinseungyeol.lecture.service.registration;
+package com.shinseungyeol.lecture.domain.registration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -8,7 +8,6 @@ import com.shinseungyeol.lecture.domain.lecture.LectureMetricsRepository;
 import com.shinseungyeol.lecture.domain.lecture.LectureRepository;
 import com.shinseungyeol.lecture.domain.member.Member;
 import com.shinseungyeol.lecture.domain.member.MemberRepository;
-import com.shinseungyeol.lecture.domain.registration.MemberLectureRegistrationService;
 import com.shinseungyeol.lecture.exception.registration.MaxRegistrationLimitExceededException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
