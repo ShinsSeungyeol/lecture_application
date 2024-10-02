@@ -1,4 +1,4 @@
-package com.shinseungyeol.lecture.controller.registration;
+package com.shinseungyeol.lecture.api.registration;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -10,10 +10,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.shinseungyeol.lecture.domain.lecture.Lecture;
 import com.shinseungyeol.lecture.domain.lecture.LectureMetrics;
+import com.shinseungyeol.lecture.domain.lecture.LectureMetricsRepository;
+import com.shinseungyeol.lecture.domain.lecture.LectureRepository;
 import com.shinseungyeol.lecture.domain.member.Member;
-import com.shinseungyeol.lecture.infrastructure.lecture.LectureMetricsRepository;
-import com.shinseungyeol.lecture.infrastructure.lecture.LectureRepository;
-import com.shinseungyeol.lecture.infrastructure.member.MemberRepository;
+import com.shinseungyeol.lecture.domain.member.MemberRepository;
 import java.time.LocalDateTime;
 import java.util.Map;
 import org.junit.jupiter.api.BeforeEach;

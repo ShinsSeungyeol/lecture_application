@@ -1,4 +1,4 @@
-package com.shinseungyeol.lecture.controller.registration;
+package com.shinseungyeol.lecture.api.registration;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.shinseungyeol.lecture.domain.lecture.Lecture;
@@ -19,8 +19,8 @@ public class MemberLectureRegistrationResponseDto {
     private Long lectureId;
     private String speakerName;
     private String lectureName;
-    private LocalDateTime lectureStartTime;
-    private LocalDateTime lectureEndTime;
+    private LocalDateTime lectureStartAt;
+    private LocalDateTime lectureEndAt;
     private LocalDateTime createDt;
 
     public static MemberLectureRegistrationResponseDto of(
@@ -33,11 +33,12 @@ public class MemberLectureRegistrationResponseDto {
         dto.setLectureId(lecture.getId());
         dto.setSpeakerName(lecture.getSpeakerName());
         dto.setLectureName(lecture.getName());
-        dto.setLectureStartTime(lecture.getStartTime());
-        dto.setLectureEndTime(lecture.getEndTime());
-        dto.setCreateDt(memberLectureRegistration.getCreateDt());
+        dto.setLectureStartAt(lecture.getStartAt());
+        dto.setLectureEndAt(lecture.getEndAt());
+        dto.setCreateDt(memberLectureRegistration.getCreateAt());
 
         return dto;
     }
+
 
 }

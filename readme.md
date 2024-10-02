@@ -14,7 +14,7 @@
 2. Lecture : 강의 엔티티
 
 3. UserLectureRegistration
-    - 사용자 강의 신청 테이블(특강 테이블)
+    - 사용자 강의 신청 테이블
     - Member 와 Lecture 의 Many To Many 관계를 관계형 데이터 베이스에 표현하기 위한 관계형 테이블
 
 4. LectureMetrics : 강의 통계 정보 테이블

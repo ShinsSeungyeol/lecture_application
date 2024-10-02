@@ -1,4 +1,4 @@
-package com.shinseungyeol.lecture.controller;
+package com.shinseungyeol.lecture.api;
 
 import lombok.AllArgsConstructor;
 

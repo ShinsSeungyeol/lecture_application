@@ -7,4 +7,6 @@ public interface MemberLectureRegistrationValidator {
 
     void validate(Lecture lecture, LectureMetrics lectureMetrics);
 
+    int getMaxRegistrationLimit();
+
 }

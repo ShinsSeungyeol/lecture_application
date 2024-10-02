@@ -1,4 +1,4 @@
-package com.shinseungyeol.lecture.controller;
+package com.shinseungyeol.lecture.api;
 
 import com.shinseungyeol.lecture.exception.lecture.NotFoundLectureException;
 import com.shinseungyeol.lecture.exception.member.NotFoundMemberException;

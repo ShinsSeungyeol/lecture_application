@@ -1,11 +1,11 @@
-package com.shinseungyeol.lecture.controller.registration;
+package com.shinseungyeol.lecture.api.registration;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class CreateMemberLectureRegistrationDto {
+public class MemberLectureRegistrationRequestDto {
 
     private Long memberId;
 
