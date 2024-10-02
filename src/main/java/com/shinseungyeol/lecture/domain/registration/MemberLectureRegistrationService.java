@@ -1,14 +1,11 @@
-package com.shinseungyeol.lecture.service.registration;
+package com.shinseungyeol.lecture.domain.registration;
 
 import com.shinseungyeol.lecture.domain.lecture.Lecture;
+import com.shinseungyeol.lecture.domain.lecture.LectureRepository;
 import com.shinseungyeol.lecture.domain.member.Member;
-import com.shinseungyeol.lecture.domain.registration.MemberLectureRegistration;
-import com.shinseungyeol.lecture.domain.registration.MemberLectureRegistrationFactory;
+import com.shinseungyeol.lecture.domain.member.MemberRepository;
 import com.shinseungyeol.lecture.exception.lecture.NotFoundLectureException;
 import com.shinseungyeol.lecture.exception.member.NotFoundMemberException;
-import com.shinseungyeol.lecture.infrastructure.lecture.LectureRepository;
-import com.shinseungyeol.lecture.infrastructure.member.MemberRepository;
-import com.shinseungyeol.lecture.infrastructure.registration.MemberLectureRegistrationRepository;
 import jakarta.transaction.Transactional;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

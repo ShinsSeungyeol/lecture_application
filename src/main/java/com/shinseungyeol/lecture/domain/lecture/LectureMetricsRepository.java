@@ -1,7 +1,5 @@
-package com.shinseungyeol.lecture.infrastructure.lecture;
+package com.shinseungyeol.lecture.domain.lecture;
 
-import com.shinseungyeol.lecture.domain.lecture.Lecture;
-import com.shinseungyeol.lecture.domain.lecture.LectureMetrics;
 import jakarta.persistence.LockModeType;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;

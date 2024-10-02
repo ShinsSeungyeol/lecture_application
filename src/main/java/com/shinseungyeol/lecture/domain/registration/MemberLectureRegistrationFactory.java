@@ -2,8 +2,8 @@ package com.shinseungyeol.lecture.domain.registration;
 
 import com.shinseungyeol.lecture.domain.lecture.Lecture;
 import com.shinseungyeol.lecture.domain.lecture.LectureMetrics;
+import com.shinseungyeol.lecture.domain.lecture.LectureMetricsRepository;
 import com.shinseungyeol.lecture.domain.member.Member;
-import com.shinseungyeol.lecture.infrastructure.lecture.LectureMetricsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

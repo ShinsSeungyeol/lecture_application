@@ -1,4 +1,4 @@
-package com.shinseungyeol.lecture.controller.registration;
+package com.shinseungyeol.lecture.api.registration;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.shinseungyeol.lecture.domain.lecture.Lecture;

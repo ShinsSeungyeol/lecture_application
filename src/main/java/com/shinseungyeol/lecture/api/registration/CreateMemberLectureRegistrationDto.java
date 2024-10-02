@@ -1,4 +1,4 @@
-package com.shinseungyeol.lecture.controller.registration;
+package com.shinseungyeol.lecture.api.registration;
 
 import lombok.Getter;
 import lombok.Setter;

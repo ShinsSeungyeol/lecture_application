@@ -1,6 +1,6 @@
-package com.shinseungyeol.lecture.controller.registration;
+package com.shinseungyeol.lecture.api.registration;
 
-import com.shinseungyeol.lecture.service.registration.MemberLectureRegistrationService;
+import com.shinseungyeol.lecture.domain.registration.MemberLectureRegistrationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

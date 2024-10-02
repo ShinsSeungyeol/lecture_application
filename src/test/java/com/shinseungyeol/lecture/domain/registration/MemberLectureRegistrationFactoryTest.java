@@ -4,8 +4,8 @@ import static org.mockito.Mockito.when;
 
 import com.shinseungyeol.lecture.domain.lecture.Lecture;
 import com.shinseungyeol.lecture.domain.lecture.LectureMetrics;
+import com.shinseungyeol.lecture.domain.lecture.LectureMetricsRepository;
 import com.shinseungyeol.lecture.domain.member.Member;
-import com.shinseungyeol.lecture.infrastructure.lecture.LectureMetricsRepository;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import org.junit.jupiter.api.Assertions;
