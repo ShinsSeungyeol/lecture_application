@@ -22,7 +22,7 @@ public class RegistrationController {
     @PostMapping("/member-lecture")
     public ResponseEntity createMemberLectureRegistration(
         @RequestBody MemberLectureRegistrationRequestDto dto) {
-        memberLectureRegistrationService.register(dto.getMemberId(), dto.getLectureId());
+        memberLectureRegistrationService.register(dto.memberId(), dto.lectureId());
 
         return ResponseEntity.ok().body("success");
     }

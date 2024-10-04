@@ -1,43 +1,29 @@
 package com.shinseungyeol.lecture.api.registration;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.shinseungyeol.lecture.domain.lecture.Lecture;
 import com.shinseungyeol.lecture.domain.member.Member;
 import com.shinseungyeol.lecture.domain.registration.MemberLectureRegistration;
 import java.time.LocalDateTime;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@NoArgsConstructor
-@Getter
-@Setter
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class MemberLectureRegistrationResponseDto {
-
-    private Long memberId;
-    private Long lectureId;
-    private String speakerName;
-    private String lectureName;
-    private LocalDateTime lectureStartAt;
-    private LocalDateTime lectureEndAt;
-    private LocalDateTime createDt;
+public record MemberLectureRegistrationResponseDto(
+    Long memberId,
+    Long lectureId,
+    String speakerName,
+    String lectureName,
+    LocalDateTime lectureStartAt,
+    LocalDateTime lectureEndAt,
+    LocalDateTime registrationDt
+) {
 
     public static MemberLectureRegistrationResponseDto of(
         MemberLectureRegistration memberLectureRegistration) {
         Lecture lecture = memberLectureRegistration.getLecture();
         Member member = memberLectureRegistration.getMember();
 
-        MemberLectureRegistrationResponseDto dto = new MemberLectureRegistrationResponseDto();
-        dto.setMemberId(member.getId());
-        dto.setLectureId(lecture.getId());
-        dto.setSpeakerName(lecture.getSpeakerName());
-        dto.setLectureName(lecture.getName());
-        dto.setLectureStartAt(lecture.getStartAt());
-        dto.setLectureEndAt(lecture.getEndAt());
-        dto.setCreateDt(memberLectureRegistration.getCreateAt());
+        return new MemberLectureRegistrationResponseDto(member.getId(), lecture.getId(),
+            lecture.getSpeakerName(), lecture.getName(), lecture.getStartAt(), lecture.getEndAt(),
+            memberLectureRegistration.getCreateAt());
 
-        return dto;
     }
 
 
